@@ -1,8 +1,8 @@
 const fetch = require('node-fetch');
-const { key, channelid } = require('./config.json');
+const { key, channelid, intervalTime } = require('./config.json');
 const { EventEmitter } = require('events')
 
-module.exports.Client = class extends EventEmitter {
+class Client extends EventEmitter {
     constructor() {
         super();
 
@@ -16,6 +16,8 @@ module.exports.Client = class extends EventEmitter {
                 latestVideo = video;
                 this.emit('video', video);
             }
-        }, 120000)
+        }, intervalTime)
     }
 }
+
+module.exports.Client = Client;
