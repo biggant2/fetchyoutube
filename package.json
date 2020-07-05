@@ -1,0 +1,15 @@
+{
+  "name": "fetchyoutube",
+  "version": "1.0.0",
+  "description": "Get a live stream of a youtuber's videos",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm i && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "biggant2",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
