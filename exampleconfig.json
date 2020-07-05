@@ -1,4 +1,6 @@
 {
     "key": "youtube api key",
-    "channelid": "channel id of the channel being tracked"
+    "channelid": "channel id of the channel being tracked",
+    "webhook": "discord webhook url",
+    "mentionEveryone": true
 }

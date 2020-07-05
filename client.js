@@ -11,12 +11,11 @@ module.exports.Client = class extends EventEmitter {
             let data = await fetch(`https://www.googleapis.com/youtube/v3/search?&part=snippet&order=date&channelId=${channelid}&key=${key}`);
             data = await data.json();
 
-            let video = data.items[0].snippet;
+            let video = data.items[0];
             if(JSON.stringify(video) !== JSON.stringify(latestVideo)) {
                 latestVideo = video;
                 this.emit('video', video);
             }
-
-        }, 5000)
+        }, 120000)
     }
 }
